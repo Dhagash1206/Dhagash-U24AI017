@@ -5,3 +5,5 @@ roll no. - A20
 admission no. - U24AI017
 
 My lab codes will be posted in this repository
+
+All code are posted in the respective branches 
