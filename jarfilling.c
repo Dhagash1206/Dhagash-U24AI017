@@ -13,13 +13,13 @@ int main()
     }while(m<1);
     printf("operation syntax : lower-limit upper-limit value-to-increase\n");
     int jars[n];
-    for(int i = 0; i<n;i++)//setting the values of all jars to zero
+    for(int i = 0; i<n;i++)
     {
         jars[i] = 0;
     }
     for(int i = 0;i < m;i++)
     {
-        int a,b,value;//a= lwrlmt,b=uprlmt,value= value to add 
+        int a,b,value;
         do{
             printf("Enter operation %d : ",i + 1);
         scanf("%d %d %d",&a,&b,&value);
@@ -30,7 +30,7 @@ int main()
         }
     }
     
-    for(int i = 0;i<n;i++)//finding sum after all operations 
+    for(int i = 0;i<n;i++)
     {
         sum = sum + jars[i];
     }
