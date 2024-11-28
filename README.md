@@ -4,4 +4,4 @@ Dhagash pandya
 roll no. - A20
 admission no. - U24AI017
 
-some experiment code is not uploaded orderwise by github
+some experiment is not uploaded orderwise by github
