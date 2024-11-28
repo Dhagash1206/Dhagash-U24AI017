@@ -8,19 +8,15 @@ int main() {
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
-    char *ptr = str;  // Pointer to original string
-    char *rev_ptr = rev_str;  // Pointer to reversed string
+    char *ptr = str; 
+    char *rev_ptr = rev_str; 
 
-    // Calculate length of original string
     int len = strlen(str);
-
-    // Copy string in reverse order
+    
     for (int i = len - 1; i >= 0; i--) {
         *rev_ptr = *(ptr + i);
         rev_ptr++;
     }
-
-    // Add null terminator
     *rev_ptr = '\0';
 
     printf("Original string: %s\n", str);
