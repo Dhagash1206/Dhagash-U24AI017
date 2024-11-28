@@ -6,7 +6,7 @@ int main()
     int N;
     printf("Enter the number : ");
     scanf("%d",&N);
-    for(int i = 1;1;i++)//loop to run until the fibo exceeds the number  
+    for(int i = 1;1;i++)
     {
         if(fibonacci(i) <= N)
         {
@@ -16,7 +16,7 @@ int main()
                 break;
             }
         }
-        else//to stop if fibo exceeds number
+        else
         {
             printf("IsNotFibo");
             break;
@@ -25,7 +25,7 @@ int main()
     return 0;
 }
 
-int fibonacci(int n)//recursion
+int fibonacci(int n)
 {
     if(n==1)
     {
