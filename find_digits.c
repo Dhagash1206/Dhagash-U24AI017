@@ -6,9 +6,9 @@ int main()
     printf("Enter number b/w 0 and 15\n");
     do{
     printf("Enter the number of test cases: ");
-    scanf("%d",&t);// taking no of test cases to store the cases in array 
+    scanf("%d",&t);
     }while(t>15 || t<0);
-    int N[t];//for storing the cases
+    int N[t];
     printf("Enter the values\n");
     for(int i = 0;i<t;i++)
     {
@@ -16,10 +16,10 @@ int main()
         scanf("%d",&N[i]);
     }
     
-    for(int j=0;j<t;j++)//for index of array representing case 
+    for(int j=0;j<t;j++)
     {
          int pos = 0;
-        for(int k = N[j];k>0;k/=10)//separating each digit and checking if divisible
+        for(int k = N[j];k>0;k/=10)
         {
             int a = k % 10;
             if(a != 0 && N[j] % a == 0)
