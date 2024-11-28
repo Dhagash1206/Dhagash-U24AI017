@@ -2,55 +2,50 @@
 // NUMBER, NAME AND TOTAL MARKS. WRITE A C PROGRAM TO CREATE A FILE TO STORE DETAILS OF N
 // STUDENTS.
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
+#include<stdio.h>
+struct StudentInfo
 {
-    int n, i;
-    int rollNumber;
-    float totalMarks;
+    int rollNo;
     char name[100];
+    float totalMarks;
+}s;
+int main()
+{  
+    FILE *fptr;
+    fptr = fopen("LNMIITSTUDENT.JAVA","w");
+    int N;
+    printf("Enter the value of N: ");
+    scanf("%d",&N);
+    getchar();
 
-    FILE *file;
+    for(int i =0; i < N; i++)
+    {   
+        printf("Enter the details of student\n");
+        printf("Enter Roll No.: ");
+        scanf("%d",&s.rollNo);
+        getchar();
+        printf("Enter student Name: ");
+        gets(s.name);
+        printf("Enter Total Marks: ");
+        scanf("%f",&s.totalMarks);
 
-    
-    printf("Enter the number of students: ");
-    scanf("%d", &n);
+        fprintf(fptr,"%s","Roll_No:");
+        fprintf(fptr,"%d",s.rollNo);
+        fprintf(fptr,"%s","\n");
 
-    
-    file = fopen("LNMIITSTUDENT.txt", "w");
+        fprintf(fptr,"%s","Name:");
+        fprintf(fptr,"%s",s.name);
+        fprintf(fptr,"%s","\n");
 
-    
-    if (file == NULL)
-    {
-        printf("Error opening file!\n");
-        return 1;
-    }
-    
-    for (i = 0; i < n; i++)
-    {
-        printf("\nEnter details for student %d\n", i + 1);
+        fprintf(fptr,"%s","Total Marks");
+        fprintf(fptr,"%f",s.totalMarks);
+        fprintf(fptr,"%s","\n");
 
-        
-        printf("Enter roll number: \n");
-        scanf("%d", &rollNumber);
-
-        printf("enter name: \n");
-        fgets(name, sizeof(name), stdin);
-
-        printf("enter marks: \n");
-        scanf("%f", &totalMarks);
+        fprintf(fptr,"%s","\n");
 
 
-        fprintf(file, " Roll no. - %d ", rollNumber);
-        fprintf(file, " Name - %s ", name);
-        fprintf(file, " Total marks - %.3f ", totalMarks);
-
-    }
-
-    
-    fclose(file);
-
+   }
+    fclose(fptr);
     return 0;
-}
+    
+} 
